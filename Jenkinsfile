@@ -24,6 +24,7 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f nginx-lb || true
+                sleep 2
                 docker run -d \
                   --name nginx-lb \
                   --network app-network \
